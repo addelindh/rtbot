@@ -5,7 +5,10 @@ from twitter import *
 import re
 import json
 import csv
+import sys  
 
+reload(sys)  
+sys.setdefaultencoding('utf8')
 
 # Open and parse the settings.json file
 with open('settings.json', 'r') as s:
@@ -30,7 +33,7 @@ def prepare_text(text):
 
     # Check if the search term is actually included in the tweet
     # (because Twitter returns related content sometimes)
-    if search_term.lower() in text.lower():      
+    if search_term.lower().encode('utf-8', "ignore") in text.lower().encode('utf-8', "ignore"):      
         # Open replace.csv and iterate through the items
         with open("replace.csv") as f:
             reader = csv.reader(f)
