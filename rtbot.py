@@ -1,13 +1,10 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from twitter import *
 import re
 import json
 import csv
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 
 # Open and parse the settings.json file
@@ -76,11 +73,10 @@ def main():
     for result in query["statuses"]:
         tweet_id = str(result["id"])
         tweet = result["user"]["screen_name"],result["text"]
-        print tweet_id + ": " + str(tweet)
         new_last_run = tweet_id
         # Ignore retweets and quotes to avoid trying the modify linked/quoted tweets
         if not str(tweet[1].encode('utf-8')).startswith("RT"):
-            rt_tweet = "RT @" + str(tweet[0]) + " " + str(tweet[1].encode('utf-8', "ignore"))
+            rt_tweet = "RT @" + str(tweet[0]) + " " + str(tweet[1])#.encode('utf-8', "ignore"))
             
             # Send to pepare_text for string replacements and length check
             rt_tweet = prepare_text(rt_tweet)
