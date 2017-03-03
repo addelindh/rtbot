@@ -76,7 +76,7 @@ def main():
         new_last_run = tweet_id
         # Ignore retweets and quotes to avoid trying the modify linked/quoted tweets
         if not str(tweet[1].encode('utf-8')).startswith("RT"):
-            rt_tweet = "RT @" + str(tweet[0]) + " " + str(tweet[1])#.encode('utf-8', "ignore"))
+            rt_tweet = "RT @" + str(tweet[0]) + " " + str(tweet[1].encode('utf-8', "ignore"))
             
             # Send to pepare_text for string replacements and length check
             rt_tweet = prepare_text(rt_tweet)
