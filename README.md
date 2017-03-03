@@ -1,6 +1,16 @@
 # rtbot
 rtbot is a Twitter-bot which searches Twitter for a search term, then performs string replacements on the results and RT:s them. The "rt" in rtbot may mean "retweet" or "retroll", depending on your use case.
 
+Original tweet:
+
+![alt tag](https://github.com/addelindh/rtbot/raw/master/ps2.png)
+
+Modified tweet:
+
+![alt tag](https://github.com/addelindh/rtbot/raw/master/ps1.png)
+
+Hillarious, right?
+
 ## Usage
 Download and unzip the package, fill out the necessary information in the settings.json and replace.csv files, and then simply run the rtbot.py script like so:
 
