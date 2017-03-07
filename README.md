@@ -40,7 +40,7 @@ This is the settings file, and looks something like this:
 
 }
 
-* The first 4 entries is the Twitter credentials that you get by joining https://dev.twitter.com.
+* The first 4 entries is the Twitter credentials that you get by joining https://dev.twitter.com while logged in as the user you want to tweet as.
 * The <code>last_run</code> entry is for the program to know from which tweet-id to search (default should be 1 but this will be automatically updated for each run)
 * The <code>search_term</code> entry is the string that you want to search Twitter for. Note that Twitter does not care about lower or upper case at all, so keep ypur search terms lower case.
 
